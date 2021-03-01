@@ -14,28 +14,28 @@ public class Course {
     @Id
     @Column(name = "COURSE_ID")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String memberId;
+    private String courseId;
 
     @Column(name = "COURSE_NAME")
-    private String memberName;
+    private String courseName;
 
     @Column(name = "COURSE_CODE")
     private String courseCode;
 
-    public String getMemberId() {
-        return memberId;
+    public String getCourseId() {
+        return courseId;
     }
 
-    public void setMemberId(String memberId) {
-        this.memberId = memberId;
+    public void setCourseId(String courseId) {
+        this.courseId = courseId;
     }
 
-    public String getMemberName() {
-        return memberName;
+    public String getCourseName() {
+        return courseName;
     }
 
-    public void setMemberName(String memberName) {
-        this.memberName = memberName;
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
     }
 
     public String getCourseCode() {
@@ -45,5 +45,6 @@ public class Course {
     public void setCourseCode(String courseCode) {
         this.courseCode = courseCode;
     }
+
 
 }

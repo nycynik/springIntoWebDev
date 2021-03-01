@@ -3,15 +3,15 @@ package com.mlg.learningSpring.api.domain;
 import java.util.Date;
 
 // ==========================================
-// Join Course DTO
+// Course Membership DTO
 //
 // Allows users to join courses
 // ==========================================
-public class JoinCourse {
+public class CourseMembership {
 
     private String CourseId;
     private String CourseCode;
-    private String UserId;
+    private String MemberId;
     private Date date;
 
     public String getCourseId() {
@@ -22,12 +22,12 @@ public class JoinCourse {
         CourseId = courseId;
     }
 
-    public String getUserId() {
-        return UserId;
+    public String getMemberId() {
+        return MemberId;
     }
 
-    public void setUserId(String userId) {
-        UserId = userId;
+    public void setMemberId(String userId) {
+        MemberId = userId;
     }
 
     public Date getDate() {
@@ -36,6 +36,14 @@ public class JoinCourse {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public String getCourseCode() {
+        return CourseCode;
+    }
+
+    public void setCourseCode(String courseCode) {
+        CourseCode = courseCode;
     }
 
 }
