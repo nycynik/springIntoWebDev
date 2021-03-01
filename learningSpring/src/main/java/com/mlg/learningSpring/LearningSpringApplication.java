@@ -1,6 +1,8 @@
 package com.mlg.learningSpring;
 
+import com.mlg.learningSpring.data.entity.Course;
 import com.mlg.learningSpring.data.entity.Member;
+import com.mlg.learningSpring.data.repository.CourseRepository;
 import com.mlg.learningSpring.data.repository.MemberRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +21,7 @@ public class LearningSpringApplication {
 
 	// Not great for production, just testing it out.
 	@RestController
-	@RequestMapping("/memebers")
+	@RequestMapping("/members")
 	public class MemberController {
 
 		@Autowired
@@ -31,4 +33,16 @@ public class LearningSpringApplication {
 		}
 	}
 
+	@RestController
+	@RequestMapping("/courses")
+	public class CourseController {
+
+		@Autowired
+		private CourseRepository courseRepository;
+
+		@GetMapping
+		public Iterable<Course> getMembers() {
+			return this.courseRepository.findAll();
+		}
+	}
 }
